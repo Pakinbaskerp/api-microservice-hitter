@@ -1,0 +1,36 @@
+<html>
+<head><title>API Gateway Swagger</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 16px;}
+label{display:block;margin:.5rem 0 .25rem;font-weight:600}
+input[type=text]{width:100%;padding:.5rem;border:1px solid #ccc;border-radius:6px}
+button{margin-top:.5rem;padding:.5rem 1rem;border:0;background:#2563eb;color:#fff;border-radius:6px;cursor:pointer}
+small{color:#666}
+.card{border:1px solid #eee;border-radius:10px;padding:16px;margin-top:24px}
+ul{line-height:1.9}
+.code{font-family:ui-monospace,Consolas,monospace;background:#f6f8fa;padding:2px 6px;border-radius:4px}
+</style>
+</head>
+<body>
+  <h2>API Gateway – Service Docs</h2>
+
+  <div class="card">
+    <form method="get" action="/set-gateway">
+      <label for="gw">API Gateway Base URL (absolute)</label>
+      <input id="gw" name="gateway" type="text" placeholder="e.g. https://api.mycorp.com" value="$gw">
+      <small>Leave blank to use <span class="code">relative</span> paths (calls this app directly).</small><br/>
+      <button type="submit">Save</button>
+    </form>
+    <p>Current: <span class="code">$current</span></p>
+  </div>
+
+  <div class="card">
+    <h3>Available Services</h3>
+    <ul>
+      $items
+    </ul>
+    <p>Visit <span class="code">/services</span> to see loaded keys.</p>
+  </div>
+</body></html>

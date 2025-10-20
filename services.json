@@ -1,0 +1,7 @@
+{
+  "services": {
+    "meta": "http://localhost:5080/swagger/v1/swagger.json",
+    "api": "http://localhost:5006/swagger/v1/swagger.json",
+    "identify": "http://localhost:5171/swagger/v1/swagger.json"
+  }
+}
